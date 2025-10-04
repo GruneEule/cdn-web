@@ -1249,3 +1249,43 @@ header .svgContainer {
     margin-bottom: 1rem;
   }
 }
+
+/* Anpassungen für die Social Media Buttons im Header */
+header .social-card {
+  background: transparent;
+  padding: 0;
+  gap: 10px;
+  margin-left: auto; /* Das schiebt die Buttons nach rechts */
+}
+
+header .Btn {
+  width: 40px;
+  height: 40px;
+}
+
+header .svgContainer {
+  border: 1px solid var(--border-color);
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 1024px) {
+  header .social-card {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .social-card {
+    display: none; /* Auf mobilen Geräten ausblenden */
+  }
+  
+  /* Alternative: Mobile Social Media Buttons */
+  .mobile-social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 1px solid var(--border-color);
+  }
+}
