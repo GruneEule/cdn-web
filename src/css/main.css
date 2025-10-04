@@ -1198,3 +1198,54 @@ footer {
 .language-option:hover {
     background: #393939;
 }
+
+
+/* Neue CSS-Regeln für die Navigation mit Social Media Buttons */
+.nav-content {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Anpassungen für die Social Media Buttons im Header */
+header .social-card {
+  background: transparent;
+  padding: 0;
+  gap: 10px;
+}
+
+header .Btn {
+  width: 40px;
+  height: 40px;
+}
+
+header .svgContainer {
+  border: 1px solid var(--border-color);
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 1024px) {
+  .nav-content {
+    gap: 1rem;
+  }
+  
+  header .social-card {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .nav-links {
+    order: 2;
+  }
+  
+  header .social-card {
+    order: 1;
+    margin-bottom: 1rem;
+  }
+}
