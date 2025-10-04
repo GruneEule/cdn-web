@@ -1201,18 +1201,18 @@ footer {
 
 
 /* Neue CSS-Regeln für die Navigation mit Social Media Buttons */
-.nav-content {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
+/* .nav-content {
+/*   display: flex;
+/*   align-items: center;
+/*   gap: 2rem;
+/* }
 
 /* Anpassungen für die Social Media Buttons im Header */
-header .social-card {
-  background: transparent;
-  padding: 0;
-  gap: 10px;
-}
+/* header .social-card {
+/*   background: transparent;
+/*   padding: 0;
+/*   gap: 10px;
+/* }
 
 header .Btn {
   width: 40px;
@@ -1287,5 +1287,73 @@ header .svgContainer {
     margin-top: 1rem;
     padding: 1rem;
     border-top: 1px solid var(--border-color);
+  }
+}
+
+/* Navigation Layout Anpassungen */
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Responsive Anpassungen */
+@media (max-width: 1024px) {
+  .nav-center {
+    position: static;
+    transform: none;
+    order: 2;
+  }
+  
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .logo {
+    order: 1;
+  }
+  
+  .nav-right {
+    order: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    gap: 1rem;
+  }
+  
+  .nav-center {
+    width: 100%;
+    order: 3;
+    margin-top: 1rem;
+  }
+  
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }
