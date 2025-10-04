@@ -1,0 +1,236 @@
+      /* Zusätzliche Styles für die Dokumentationsseite */
+      .docs-container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 2rem;
+      }
+
+      .docs-tabs {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .tab-btn {
+        padding: 0.8rem 1.5rem;
+        background: transparent;
+        border: 1px solid var(--border-color);
+        border-radius: 8px 8px 0 0;
+        color: var(--text-secondary);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: 600;
+        position: relative;
+        margin-bottom: -1px;
+      }
+
+      .tab-btn:hover {
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+      }
+
+      .tab-btn.active {
+        background: var(--bg-card);
+        color: var(--text-primary);
+        border-bottom: 1px solid var(--bg-card);
+        z-index: 2;
+      }
+
+      .docs-content {
+        background: var(--bg-card);
+        border-radius: 0 15px 15px 15px;
+        padding: 2rem;
+        border: 1px solid var(--border-color);
+        min-height: 400px;
+        position: relative;
+      }
+
+      .docs-tab-content {
+        display: none;
+      }
+
+      .docs-tab-content.active {
+        display: block;
+      }
+
+      .docs-loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 200px;
+        color: var(--text-muted);
+      }
+
+      .docs-error {
+        color: #e74c3c;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .docs-markdown {
+        line-height: 1.7;
+      }
+
+      .docs-markdown h1,
+      .docs-markdown h2,
+      .docs-markdown h3,
+      .docs-markdown h4,
+      .docs-markdown h5,
+      .docs-markdown h6 {
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+      }
+
+      .docs-markdown h1 {
+        font-size: 2rem;
+        border-bottom: 2px solid var(--main-color);
+        padding-bottom: 0.5rem;
+      }
+
+      .docs-markdown h2 {
+        font-size: 1.6rem;
+      }
+
+      .docs-markdown h3 {
+        font-size: 1.4rem;
+      }
+
+      .docs-markdown p {
+        margin-bottom: 1rem;
+      }
+
+      .docs-markdown ul,
+      .docs-markdown ol {
+        margin-bottom: 1rem;
+        padding-left: 2rem;
+      }
+
+      .docs-markdown li {
+        margin-bottom: 0.5rem;
+      }
+
+      .docs-markdown code {
+        background: var(--bg-secondary);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-family: monospace;
+      }
+
+      .docs-markdown pre {
+        background: var(--bg-secondary);
+        padding: 1rem;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin-bottom: 1rem;
+      }
+
+      .docs-markdown pre code {
+        background: transparent;
+        padding: 0;
+      }
+
+      .docs-markdown blockquote {
+        border-left: 4px solid var(--main-color);
+        padding-left: 1rem;
+        margin-left: 0;
+        margin-bottom: 1rem;
+        color: var(--text-secondary);
+      }
+
+      .docs-markdown a {
+        color: var(--main-color);
+        text-decoration: none;
+      }
+
+      .docs-markdown a:hover {
+        text-decoration: underline;
+      }
+
+      .docs-markdown table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1rem;
+      }
+
+      .docs-markdown th,
+      .docs-markdown td {
+        padding: 0.5rem;
+        border: 1px solid var(--border-color);
+        text-align: left;
+      }
+
+      .docs-markdown th {
+        background: var(--bg-secondary);
+      }
+
+      .edit-github-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.6rem 1.2rem;
+        background: var(--bg-secondary);
+        color: var(--text-primary);
+        text-decoration: none;
+        border-radius: 6px;
+        border: 1px solid var(--border-color);
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .edit-github-btn:hover {
+        background: var(--main-color);
+        color: white;
+        text-decoration: none;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(46, 139, 87, 0.3);
+      }
+
+      .edit-github-btn img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .docs-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .docs-title {
+        margin: 0;
+        color: var(--text-primary);
+        flex: 1;
+      }
+
+      @media (max-width: 768px) {
+        .docs-tabs {
+          flex-direction: column;
+        }
+
+        .tab-btn {
+          border-radius: 8px;
+          margin-bottom: 0.5rem;
+        }
+
+        .docs-content {
+          border-radius: 0 0 15px 15px;
+        }
+
+        .docs-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .edit-github-btn {
+          align-self: flex-start;
+        }
+      }
