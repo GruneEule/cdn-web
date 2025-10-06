@@ -1363,3 +1363,41 @@ nav {
   color: currentColor;
   letter-spacing: 0.06em;
 }
+
+/* Hervorgehobener Source Button */
+.source-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, var(--main-color), var(--main-dark));
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: var(--shadow-glow);
+}
+
+.source-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(46, 139, 87, 0.4);
+  background: linear-gradient(135deg, var(--main-dark), var(--main-color));
+}
+
+/* Responsive Anpassung */
+@media (max-width: 768px) {
+  .source-btn span {
+    display: none;
+  }
+  
+  .source-btn {
+    padding: 10px;
+  }
+  
+  .source-btn svg {
+    margin: 0;
+  }
+}
