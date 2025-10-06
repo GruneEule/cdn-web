@@ -1,15 +1,22 @@
 // source-button.js
-const observer = new MutationObserver((mutations, obs) => {
-    const btn = document.getElementById("source-btn");
-    if (btn) {
-        let path = window.location.pathname.replace(/\/$/, "");
-        path = path.replace(/\/index$/, ""); // /index entfernen
-        btn.href = path + "/source";
-        btn.title = "View source for this page on GitHub";
-        btn.target = "_blank";
-        obs.disconnect(); // Observer stoppen
-    }
-});
 
-// Auf gesamten Body achten, inklusive dynamischer Inhalte
-observer.observe(document.body, { childList: true, subtree: true });
+document.addEventListener("DOMContentLoaded", () => {
+    // Finde den Button im Header/Footer
+    const sourceBtn = document.getElementById("source-btn");
+    if (!sourceBtn) return; // Abbrechen, falls Button nicht existiert
+
+    // Aktuellen Pfad holen (ohne Domain)
+    let path = window.location.pathname;
+
+    // Letzten Slash entfernen, falls vorhanden
+    path = path.replace(/\/$/, "");
+
+    // Link auf /source bauen
+    sourceBtn.href = path + "/source";
+
+    // Optional: Tooltip setzen
+    sourceBtn.title = "View source for this page on GitHub";
+
+    // Optional: Ziel in neuem Tab öffnen
+    sourceBtn.target = "_blank";
+});
