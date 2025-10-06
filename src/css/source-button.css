@@ -1,101 +1,41 @@
-.source-section {
-  padding: 4rem 0;
-  background: linear-gradient(
-    135deg,
-    rgba(46, 139, 87, 0.05) 0%,
-    rgba(138, 43, 226, 0.05) 100%
-  );
-  margin: 2rem 0;
-}
-
-.source-section .container {
-  max-width: 800px;
-  margin: 0 auto;
+/* Minimale Source Section */
+.source-section-minimal {
+  padding: 2rem 0;
   text-align: center;
-  padding: 0 2rem;
 }
 
-.source-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(90deg, #2e8b57, #8a2be2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.source-section p {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  opacity: 0.8;
-  line-height: 1.6;
-}
-
-.source-btn-wrapper {
-  display: inline-block;
-  position: relative;
-}
-
-.source-btn {
+.source-btn-minimal {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 2rem;
-  background: linear-gradient(135deg, #2e8b57 0%, #1e5f3f 100%);
-  color: white;
-  text-decoration: none;
-  border-radius: 50px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(46, 139, 87, 0.3);
-  cursor: pointer;
-  border: 2px solid transparent;
-}
-
-.source-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 25px rgba(46, 139, 87, 0.5);
-  background: linear-gradient(135deg, #1e5f3f 0%, #2e8b57 100%);
-  border-color: rgba(255, 255, 255, 0.2);
-}
-
-.source-btn:active {
-  transform: translateY(-1px);
-}
-
-.source-btn svg {
-  width: 24px;
-  height: 24px;
-  transition: transform 0.3s ease;
-}
-
-.source-btn:hover svg {
-  transform: rotate(360deg);
-}
-
-.source-badge {
-  display: inline-block;
-  margin-top: 1rem;
+  gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: rgba(46, 139, 87, 0.1);
-  border-radius: 20px;
+  background: transparent;
+  color: var(--text-color, #333);
+  text-decoration: none;
+  border: 1px solid rgba(46, 139, 87, 0.3);
+  border-radius: 6px;
   font-size: 0.9rem;
-  color: #2e8b57;
-  border: 1px solid rgba(46, 139, 87, 0.2);
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
-@media (max-width: 768px) {
-  .source-section h2 {
-    font-size: 2rem;
-  }
+.source-btn-minimal:hover {
+  border-color: #2e8b57;
+  background: rgba(46, 139, 87, 0.05);
+}
 
-  .source-section p {
-    font-size: 1rem;
-  }
+.source-btn-minimal svg {
+  width: 16px;
+  height: 16px;
+  opacity: 0.7;
+}
 
-  .source-btn {
-    padding: 0.875rem 1.5rem;
-    font-size: 1rem;
+.source-btn-minimal:hover svg {
+  opacity: 1;
+}
+
+@media (prefers-color-scheme: dark) {
+  .source-btn-minimal {
+    color: #fff;
   }
 }
