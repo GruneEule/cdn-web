@@ -1,24 +1,15 @@
 // source-button.js
-
-// MutationObserver prüfen das DOM auf Änderungen
-const observer = new MutationObserver(() => {
+const observer = new MutationObserver((mutations, obs) => {
     const btn = document.getElementById("source-btn");
     if (btn) {
-        // Pfad der aktuellen Seite ermitteln
         let path = window.location.pathname.replace(/\/$/, "");
-
-        // /index automatisch entfernen
-        path = path.replace(/\/index$/, "");
-
-        // href setzen
+        path = path.replace(/\/index$/, ""); // /index entfernen
         btn.href = path + "/source";
         btn.title = "View source for this page on GitHub";
         btn.target = "_blank";
-
-        // Observer kann stoppen
-        observer.disconnect();
+        obs.disconnect(); // Observer stoppen
     }
 });
 
-// Start beobachten: body nach Änderungen prüfen
+// Auf gesamten Body achten, inklusive dynamischer Inhalte
 observer.observe(document.body, { childList: true, subtree: true });
