@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector(".pages-grid");
 
-    fetch("/assets/data/wee-all.json")
+    fetch("https://api.grueneeule.de/v1/toollab-community/pages.json")
         .then(res => res.json())
         .then(data => {
             data.sections.forEach(section => {
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    fetch("/assets/data/wee-all.json")
+    fetch("https://api.grueneeule.de/v1/toollab-community/pages.json")
         .then(res => res.json())
         .then(data => {
             allSections = data.sections;
