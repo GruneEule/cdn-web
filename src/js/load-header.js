@@ -21,3 +21,11 @@ window.addEventListener("DOMContentLoaded", () => {
             document.getElementById("header-dev-container").innerHTML = data;
         });
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+    fetch("https://twfee.grueneeule.de/assets/templates/header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("header-twfee-container").innerHTML = data;
+        });
+});
