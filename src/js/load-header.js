@@ -23,9 +23,9 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 window.addEventListener("DOMContentLoaded", () => {
-    fetch("https://twfee.grueneeule.de/assets/templates/header.html")
+    fetch("https://toollab.grueneeule.de/assets/templates/header.html")
         .then(response => response.text())
         .then(data => {
-            document.getElementById("header-twfee-container").innerHTML = data;
+            document.getElementById("header-toollab-container").innerHTML = data;
         });
 });
