@@ -1,0 +1,11 @@
+/* grueneeule-web/header-dev.css */
+.header-dev nav:first-child {
+  margin-bottom: 20px;
+}
+
+.header-dev .logo-text {
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 18px;
+  vertical-align: middle;
+}
