@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
   fetch(
-    "https://cdn.grueneeule.de/templates/header/de/grueneeule-web/header.html"
+    "https://cdn.grueneeule.de/templates/header/grueneeule-web/de/header.html"
   )
     .then((response) => response.text())
     .then((data) => {
@@ -10,7 +10,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("DOMContentLoaded", () => {
   fetch(
-    "https://cdn.grueneeule.de/templates/header/en/grueneeule-web/header.html"
+    "https://cdn.grueneeule.de/templates/header/grueneeule-web/en/header.html"
   )
     .then((response) => response.text())
     .then((data) => {
@@ -20,7 +20,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("DOMContentLoaded", () => {
   fetch(
-    "https://cdn.grueneeule.de/templates/header/de/grueneeule-web/header-dev.html"
+    "https://cdn.grueneeule.de/templates/header/grueneeule-web/de/header-dev.html"
   )
     .then((response) => response.text())
     .then((data) => {
@@ -30,7 +30,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 window.addEventListener("DOMContentLoaded", () => {
   fetch(
-    "https://cdn.grueneeule.de/templates/header/en/grueneeule-web/header-dev.html"
+    "https://cdn.grueneeule.de/templates/header/grueneeule-web/en/header-dev.html"
   )
     .then((response) => response.text())
     .then((data) => {
