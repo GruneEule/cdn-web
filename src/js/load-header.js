@@ -37,3 +37,23 @@ window.addEventListener("DOMContentLoaded", () => {
       document.getElementById("header-dev-en-container").innerHTML = data;
     });
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  fetch(
+    "https://cdn.grueneeule.de/templates/header/grueneeule-web/de/header-gaming.html"
+  )
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header-gaming-de-container").innerHTML = data;
+    });
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  fetch(
+    "https://cdn.grueneeule.de/templates/header/grueneeule-web/en/header-gaming.html"
+  )
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header-gaming-en-container").innerHTML = data;
+    });
+});
