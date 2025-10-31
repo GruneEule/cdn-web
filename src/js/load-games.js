@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     '<div class="loading-spinner">Lade Projekte...</div>';
 
   // Lade die Projektdaten
-  fetch("/assets/data/projects.json")
+  fetch("https://api.grueneeule.de/v1/geg/games/games.json")
     .then((response) => {
       console.log(
         "HTTP Response erhalten:",
