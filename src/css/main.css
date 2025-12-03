@@ -1,67 +1,80 @@
 :root {
-    /* WEIHNACHTS-PALETTE (Dark Mode Standard) */
-    --main-color: #d42426; /* Weihnachtsrot */
-    --main-dark: #165b33;  /* Tannengrün */
-    --accent-orange: #ffd700; /* Gold (statt Orange) */
-    --accent-purple: #c41e3a; /* Beerenrot */
-    --accent-green: #2ecc71; /* Helles Lichtgrün */
+    /* --- WEIHNACHTS-PALETTE V2 (MEHR ROT!) --- */
     
-    /* Markenfarben beibehalten, aber angepasst wo nötig */
+    /* Helles Weihnachtsrot */
+    --main-color: #d42426; 
+    
+    /* ÄNDERUNG: Statt Tannengrün jetzt tiefes Weinrot */
+    --main-dark: #4a0e0e;  
+
+    --accent-orange: #ffd700; /* Gold bleibt als Akzent */
+    --accent-purple: #c41e3a; /* Beerenrot */
+    /* Grün nur noch als absoluter Notfall-Akzent, kaum genutzt */
+    --accent-green: #2ecc71; 
+    
+    /* Markenfarben angepasst */
     --discord-blue: #5865F2;
     --owlinx-blue: #348792;
-    --dlg-red: #ff0000; /* Leuchtendes Rot */
+    --dlg-red: #ff0000; 
     --owcolor-purple: #6f48b9;
-    --toollab: #2e8b57;
+    /* ÄNDERUNG: Toollab ist jetzt auch rot */
+    --toollab: var(--main-color); 
     
     --usbv-grey: #3d3d3d;
     
-    /* Hintergrund: Ein sehr dunkles "Winternacht"-Blau/Grau */
-    --bg-primary: #0b1016; 
-    --bg-secondary: #121820;
-    --bg-card: #1c2430;
+    /* Hintergrund: Sehr dunkles, warmes Schwarz/Rotstich */
+    --bg-primary: #0f0505; 
+    --bg-secondary: #1a0a0a;
+    --bg-card: #240f0f;
     
     --text-primary: #f0f0f0; /* Leichtes Schneeweiß */
-    --text-secondary: #b3b3b3;
-    --text-muted: #808080;
-    --border-color: #2c3e50;
+    --text-secondary: #d9b3b3; /* Leicht rötliches Grau */
+    --text-muted: #997373;
+    --border-color: #4a1a1a; /* Rötlicher Rand */
     
-    /* Festliche Verläufe */
+    /* Festliche Verläufe - JETZT KOMPLETT ROT */
+    /* Da main-dark jetzt auch rot ist, ist dieser Verlauf rot-zu-dunkelrot */
     --gradient-1: linear-gradient(135deg, var(--main-color), var(--main-dark));
-    --usbv-gradient: linear-gradient(135deg, #2c3e50, #4ca1af); /* Frostiges Grau/Blau */
-    --gradient-2: linear-gradient(135deg, #1a1a1a, #2a2a2a);
     
-    --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
-    /* Goldener Schein für Weihnachten */
-    --shadow-glow: 0 0 20px rgba(255, 215, 0, 0.2); 
-    --header-bg-rgb: 11, 16, 22;
+    --usbv-gradient: linear-gradient(135deg, #2c3e50, #4ca1af); /* Frostiges Grau/Blau für Kontrast */
+    --gradient-2: linear-gradient(135deg, #1a0a0a, #2a1a1a);
+    
+    /* Rötlicher Schatten */
+    --shadow: 0 8px 32px rgba(60, 0, 0, 0.4);
+    /* Goldener/Roter Schein */
+    --shadow-glow: 0 0 20px rgba(212, 36, 38, 0.3); 
+    --header-bg-rgb: 15, 5, 5;
 }
 
 :root.light {
-    /* WEIHNACHTS-PALETTE (Light Mode - "Schneetag") */
+    /* LIGHT MODE WEIHNACHTEN (MEHR ROT) */
     --main-color: #c41e3a;
-    --main-dark: #2f5a2e;
+    /* ÄNDERUNG: Dunkles Rot statt Grün */
+    --main-dark: #800000; 
+    
     --accent-orange: #e6b800;
     --accent-purple: #9b30ff;
     --accent-green: #63da15;
     --discord-blue: #5865F2;
     --usbv-grey: #a0a0a0;
+    --toollab: var(--main-color);
     
-    --bg-primary: #ffffff;
-    --bg-secondary: #f4f7f6; /* Sehr helles Eisblau/Grau */
+    --bg-primary: #fffafa; /* Fast weiß mit minimalem Rotstich */
+    --bg-secondary: #fceeee; /* Sehr helles Rosa/Rot */
     --bg-card: #ffffff;
     
-    --text-primary: #1f1f1f;
-    --text-secondary: #4a4a4a;
+    --text-primary: #2e0a0a; /* Sehr dunkles Rotbraun */
+    --text-secondary: #5c2929;
     --text-muted: #7a7a7a;
-    --border-color: #dceefb;
+    --border-color: #ffcccc; /* Helles Rot */
     
     --gradient-1: linear-gradient(135deg, var(--main-color), var(--main-dark));
     --usbv-gradient: linear-gradient(135deg, #d0d0d0, #a0a0a0, #707070);
-    --gradient-2: linear-gradient(135deg, #fefcf9, #f4f3f2);
+    --gradient-2: linear-gradient(135deg, #fefcf9, #fceeee);
     
-    --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    --shadow-glow: 0 0 15px rgba(196, 30, 58, 0.15);
-    --header-bg-rgb: 255, 255, 255;
+    --shadow: 0 8px 24px rgba(100, 0, 0, 0.08);
+    --shadow-glow: 0 0 15px rgba(196, 30, 58, 0.2);
+    --header-bg-rgb: 255, 250, 250;
 }
 
 * {
@@ -86,7 +99,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.7; /* Etwas sichtbarer */
     pointer-events: none;
     background: transparent;
 }
@@ -98,7 +111,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    /* CSS Schnee-Trick mit radialen Verläufen */
+    /* CSS Schnee */
     background-image: 
         radial-gradient(3px 3px at 10% 10%, #fff, transparent),
         radial-gradient(2px 2px at 20% 30%, #fff, transparent),
@@ -113,7 +126,7 @@ body {
     animation: snow 15s linear infinite;
 }
 
-/* Optional: Zweite Ebene für mehr Tiefe */
+/* Zweite Ebene für mehr Tiefe */
 .bg-animation::after {
     content: '';
     position: absolute;
@@ -135,7 +148,7 @@ body {
     100% { background-position: 100px 600px; }
 }
 
-/* Falls du die alte "Float" Animation lieber magst, ist sie hier deaktiviert: */
+/* Alte Animation deaktiviert */
 @keyframes float {
     0%, 100% { transform: translateY(0px) rotate(0deg); }
     50% { transform: translateY(-20px) rotate(180deg); }
@@ -161,16 +174,16 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Dunklerer Overlay für bessere Lesbarkeit des Schnees */
-    background: linear-gradient(rgba(11, 16, 22, 0.85), rgba(11, 16, 22, 0.95)), url("/api/placeholder/1200/800") center/cover;
+    /* Rötlicher Overlay */
+    background: linear-gradient(rgba(20, 5, 5, 0.85), rgba(10, 0, 0, 0.95)), url("/api/placeholder/1200/800") center/cover;
 }
 
 .hero-logo {
     width: 250px;
     height: 250px;
     border-radius: 50%;
-    /* Roter Schein statt dunkel */
-    box-shadow: 0 0 35px rgba(212, 36, 38, 0.4); 
+    /* Starker roter Schein */
+    box-shadow: 0 0 40px rgba(212, 36, 38, 0.6); 
     border: 4px solid var(--main-color);
     margin-bottom: 2rem;
 }
@@ -208,14 +221,15 @@ main {
 .cta-button {
     display: inline-block;
     padding: 1rem 2rem;
+    /* Dies ist jetzt ein reiner Rot-Verlauf */
     background: var(--gradient-1);
-    color: white; /* Immer weißer Text für Kontrast */
+    color: white;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     transition: all 0.3s ease;
     box-shadow: var(--shadow-glow);
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255, 50, 50, 0.2);
 }
 
 .btn-secondary {
@@ -231,8 +245,8 @@ main {
 
 .cta-button:hover {
     transform: translateY(-2px);
-    /* Leuchtender */
-    box-shadow: 0 0 30px rgba(255, 215, 0, 0.4); 
+    /* Leuchtender roter Schein */
+    box-shadow: 0 0 30px rgba(212, 36, 38, 0.6); 
 }
 
 @keyframes slideInUp {
@@ -264,7 +278,7 @@ main {
     display: block;
     width: 80px;
     height: 3px;
-    /* Rot-Grün-Gold Verlauf */
+    /* Rot-Gold-Dunkelrot Verlauf (kein Grün mehr) */
     background: linear-gradient(90deg, var(--main-color), var(--accent-orange), var(--main-dark));
     margin: 0.5rem auto 0;
     border-radius: 2px;
@@ -286,7 +300,7 @@ main {
     overflow: hidden;
 }
 
-/* "Schnee auf der Karte" Effekt beim Hover */
+/* "Schnee/Licht auf der Karte" Effekt beim Hover */
 .project-card::before {
     content: '';
     position: absolute;
@@ -294,6 +308,7 @@ main {
     left: -100%;
     width: 100%;
     height: 100%;
+    /* Rötlicher Schimmer */
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
     transition: left 0.5s ease;
 }
@@ -304,14 +319,15 @@ main {
 
 .project-card:hover {
     transform: translateY(-5px);
-    border-color: var(--accent-orange); /* Goldener Rand bei Hover */
-    box-shadow: 0 0 25px rgba(212, 36, 38, 0.15);
+    border-color: var(--main-color); /* Roter Rand bei Hover */
+    box-shadow: 0 0 25px rgba(212, 36, 38, 0.25);
 }
 
 /* Farbanpassungen für die Karten-Top-Border */
 .discord-card { border-top: 3px solid var(--discord-blue); }
 .eulex-card { border-top: 3px solid var(--accent-orange); }
 .gaming-card { border-top: 3px solid var(--dlg-red); }
+/* ÄNDERUNG: Toollab ist jetzt rot */
 .toollab-card { border-top: 3px solid var(--toollab); }
 .dlg-card { border-top: 3px solid var(--dlg-red); }
 .owcolor-card { border-top: 3px solid var(--owcolor-purple); }
@@ -355,6 +371,7 @@ main {
 .about-button {
     display: inline-block;
     padding: 1rem 2rem;
+    /* Reiner Rot-Verlauf */
     background: var(--gradient-1);
     color: white;
     text-decoration: none;
@@ -366,28 +383,30 @@ main {
 
 .about-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 30px rgba(212, 36, 38, 0.5);
+    box-shadow: 0 0 30px rgba(212, 36, 38, 0.6);
 }
 
 /* Maintenance Section */
 .maintenance {
     padding: 4rem 0;
-    /* Gestreifter Hintergrund wie Zuckerstange (dezent) */
+    /* Gestreifter Hintergrund (Zuckerstange) */
     background: repeating-linear-gradient(
         45deg,
-        var(--main-color),
+        var(--main-dark),
+        var(--main-dark) 20px,
         var(--main-color) 20px,
-        #a61b1d 20px,
-        #a61b1d 40px
+        var(--main-color) 40px
     );
     color: white;
     text-align: center;
+    border-top: 2px solid gold;
+    border-bottom: 2px solid gold;
 }
 
 .maintenance h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .maintenance p {
@@ -395,14 +414,14 @@ main {
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+    text-shadow: 0 1px 2px rgba(0,0,0,0.5);
 }
 
 .maintenance-btn {
     display: inline-block;
     padding: 1rem 2rem;
     background: white;
-    color: var(--main-color);
+    color: var(--main-dark);
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
@@ -411,7 +430,8 @@ main {
 
 .maintenance-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); /* Goldener Schein */
+    color: var(--main-color);
 }
 
 /* USBv Section */
@@ -481,7 +501,8 @@ footer {
 }
 
 .footer-section a:hover {
-    color: var(--accent-orange); /* Hover in Gold */
+    color: var(--main-color);
+    text-shadow: 0 0 5px var(--main-color);
 }
 
 .footer-bottom {
@@ -505,12 +526,12 @@ footer {
     justify-content: center;
     color: white;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(212, 36, 38, 0.5);
+    box-shadow: 0 4px 15px rgba(212, 36, 38, 0.6);
     opacity: 0;
     transition: all 0.3s ease;
     z-index: 99;
     cursor: pointer;
-    border: 2px solid white; /* Wie eine Weihnachtskugel */
+    border: 2px solid gold; /* Goldener Rand */
 }
 
 .scroll-top.active {
@@ -520,6 +541,7 @@ footer {
 .scroll-top:hover {
     background: var(--main-dark);
     transform: translateY(-3px);
+    box-shadow: 0 0 20px gold;
 }
 
 /* Responsive Design */
@@ -575,7 +597,7 @@ footer {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: linear-gradient(rgba(11, 16, 22, 0.7), rgba(11, 16, 22, 0.9)), url("/assets/img/news-bg.jpg") center/cover;
+    background: linear-gradient(rgba(20, 5, 5, 0.7), rgba(20, 5, 5, 0.9)), url("/assets/img/news-bg.jpg") center/cover;
 }
 
 .news-grid, .news-list {
@@ -596,7 +618,7 @@ footer {
 .news-card:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow-glow);
-    border-color: var(--accent-orange);
+    border-color: var(--main-color);
 }
 
 .news-card-image {
@@ -635,6 +657,7 @@ footer {
 
 .news-card-link:hover {
     color: var(--accent-orange);
+    text-shadow: 0 0 5px var(--accent-orange);
 }
 
 /* All News Page */
@@ -751,7 +774,7 @@ footer {
 
 .theme-toggle:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 15px var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
 }
 
 /* Footer Logo */
@@ -775,7 +798,7 @@ footer {
     width: auto;
     max-width: 100%;
     object-fit: contain;
-    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    filter: drop-shadow(0 2px 4px rgba(212, 36, 38, 0.3)); /* Roter Schatten */
 }
 
 @media (max-width: 768px) {
@@ -818,7 +841,8 @@ footer {
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(212, 36, 38, 0.1), transparent);
+    /* Starker roter Schimmer */
+    background: linear-gradient(90deg, transparent, rgba(212, 36, 38, 0.2), transparent);
     transition: left 0.5s ease;
 }
 
@@ -858,28 +882,33 @@ footer {
     margin-right: 8px;
 }
 
-/* Status Farben angepasst */
+/* Status Farben beibehalten für Funktionalität, aber angepasst */
 .status-operational {
-    background-color: rgba(46, 204, 113, 0.15);
-    color: #2ecc71; /* Tannengrün hell */
+    background-color: rgba(46, 204, 113, 0.1);
+    color: #2ecc71; 
+    border: 1px solid #2ecc71;
 }
 .status-operational::before { background-color: #2ecc71; }
 
 .status-issues {
-    background-color: rgba(241, 196, 15, 0.15);
+    background-color: rgba(255, 215, 0, 0.1);
     color: #ffd700; /* Gold */
+    border: 1px solid #ffd700;
 }
 .status-issues::before { background-color: #ffd700; }
 
 .status-outage {
-    background-color: rgba(231, 76, 60, 0.15);
-    color: #e74c3c; /* Rudolph Rot */
+    background-color: rgba(212, 36, 38, 0.2);
+    color: #ff0000; /* Knallrot */
+    border: 1px solid #ff0000;
+    box-shadow: 0 0 10px rgba(255,0,0,0.3);
 }
-.status-outage::before { background-color: #e74c3c; }
+.status-outage::before { background-color: #ff0000; }
 
 .status-maintenance {
-    background-color: rgba(52, 152, 219, 0.15);
-    color: #3498db; /* Eisblau */
+    background-color: rgba(52, 152, 219, 0.1);
+    color: #3498db; 
+    border: 1px solid #3498db;
 }
 .status-maintenance::before { background-color: #3498db; }
 
@@ -902,12 +931,13 @@ footer {
     left: 0;
     width: 50px;
     height: 2px;
+    /* Rot-zu-Dunkelrot */
     background: var(--gradient-1);
     border-radius: 1px;
 }
 
 .incident-item, .maintenance-item {
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(212, 36, 38, 0.05); /* Leichter Rotstich im Hintergrund */
     border-radius: 10px;
     padding: 1.2rem;
     margin-bottom: 1rem;
@@ -957,11 +987,11 @@ footer {
 }
 
 .view-all-link:hover {
-    background: var(--gradient-1);
+    background: var(--main-color);
     color: white;
     text-decoration: none;
     transform: translateY(-2px);
-    box-shadow: var(--shadow-glow);
+    box-shadow: 0 0 20px rgba(212, 36, 38, 0.6);
 }
 
 .loading {
@@ -973,7 +1003,7 @@ footer {
 .error {
     text-align: center;
     padding: 2rem;
-    color: #e74c3c;
+    color: #ff0000;
 }
 
 @media (max-width: 768px) {
@@ -1017,6 +1047,7 @@ footer {
 .language-switch-btn:hover {
     background: var(--bg-secondary);
     border-color: var(--main-color);
+    box-shadow: 0 0 10px rgba(212, 36, 38, 0.3);
 }
 
 .language-flag {
@@ -1064,6 +1095,7 @@ footer {
 
 .language-option:hover {
     background: var(--bg-secondary);
+    color: var(--main-color);
 }
 
 /* Responsive adjustments */
