@@ -1,0 +1,7 @@
+Schriftzug2.png:
+Width: 196
+Height: 35
+
+minecraft_title.png:
+Width: 273
+Height: 60
