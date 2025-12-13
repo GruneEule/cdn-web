@@ -77,3 +77,23 @@ window.addEventListener("DOMContentLoaded", () => {
       document.getElementById("header-bot-en-container").innerHTML = data;
     });
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  fetch(
+    "https://cdn.grueneeule.de/templates/header/grueneeule-web/de/header-toollab.html"
+  )
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header-toollab-de-container").innerHTML = data;
+    });
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+  fetch(
+    "https://cdn.grueneeule.de/templates/header/grueneeule-web/en/header-toollab.html"
+  )
+    .then((response) => response.text())
+    .then((data) => {
+      document.getElementById("header-toollab-en-container").innerHTML = data;
+    });
+});
